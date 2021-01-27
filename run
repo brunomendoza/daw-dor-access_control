@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ -d "$1" ]; then
+    docker run --rm -it --name dor-daw-nginx -d -v "$1":/usr/share/nginx/html -p 8080:80 nginx:stable
+fi

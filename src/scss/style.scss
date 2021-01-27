@@ -4,8 +4,85 @@
 
 html {
     font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    line-height: 1.15;
+    box-sizing: border-box;
 }
 
 .page {
     padding: 1.25rem;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+}
+
+header, main, footer {
+    margin-bottom: 20 / 14 * 1rem;
+}
+
+header {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 20 / 14 * 1rem;
+
+    .logo {
+        display: block;
+        grid-column: 1 / -1;
+    }
+    
+    nav.navbar {
+        grid-column: 1 / -1;
+
+        ul.nav {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            align-items: center;
+
+            a {
+                flex: 1 1 auto;
+                display: flex;
+                flex-flow: row nowrap;
+                justify-content: space-between;
+                align-items: center;
+                padding: 6 / 14 * 1rem;
+                text-decoration: none;
+                color: variables.$primary-color;
+
+                & > i {
+                    padding-right: 6 / 14 * 1rem;
+                }
+    
+                &:hover {
+                    color: #9C0C1F;
+                }
+            }
+        }
+    }
+    
+    form.search {
+        grid-column: 1 / -1;
+
+        label {
+            position: relative;
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 6 / 14 * 1rem;
+
+            input[type="text"] {
+                box-sizing: border-box;
+                display: block;
+                width: 100%;
+                padding: 6 / 14 * 1rem;
+                border: 0;
+                background-color: white;
+                font-size: 12px / 14px * 1rem;
+                font-family: 'Poppins', sans-serif;
+                line-height: 1.5;
+                border-radius: 15 / 14 * 1rem;
+            }
+        }
+    }
 }

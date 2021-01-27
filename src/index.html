@@ -8,7 +8,55 @@
 </head>
 <body>
     <div class="page">
-        <h1>Raspy Project</h1>
+        <header>
+            <div class="logo">
+                <svg xmlns="" width="240" height="60" viewBox="0 0 240 60">
+                    <style>
+                        .inner {
+                            fill:  #E5E7F3;;
+                        }
+
+                        .outer, .letter {
+                            fill: #EF344D;
+                        }
+
+                        .letter {
+                            font-size: 30px;
+                        }
+
+                        .title {
+                            font-size: 18px;
+                            fill: #000000;
+                        }
+                    </style>
+                    <circle class="outer" cx="30" cy="30" r="30" />
+                    <circle class="inner" cx="30" cy="30" r="27" />"
+                    <text class="letter" x="21" y="39">T</text>
+                    <text class="title" x="72" y="39">RASPACCESS</text>
+                </svg>
+            </div>
+            <nav class="navbar">
+                <ul class="nav">
+                    <li><a href=""><i class="material-icons">house</i>Inicio</a></li>
+                    <li><a href="">Información</a></li>
+                    <li><a href="">Contacto</a></li>
+                </ul>
+            </nav>
+            <form class="search" action="">
+                <label for="search">
+                    <i class="input-icon material-icons">search</i>&nbsp;
+                    <input type="text" name="search" id="search" placeholder="Buscar">
+                </label>
+            </form>
+        </header>
+        <main>
+            <div class="banner">
+
+            </div>
+        </main>
+        <footer>
+            Proyecto Control Acceso &copy; 2021
+        </footer>
     </div>
     <script src="./js/script.js"></script>
 </body>
