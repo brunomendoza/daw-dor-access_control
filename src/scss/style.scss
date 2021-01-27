@@ -1,0 +1,11 @@
+@use 'reset';
+@use 'font-stack';
+@use 'variables';
+
+html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.page {
+    padding: 1.25rem;
+}
