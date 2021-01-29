@@ -129,3 +129,14 @@ header form.search label input[type=text] {
   line-height: 1.5;
   border-radius: 1.0714285714rem;
 }
+header .banner {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-areas: "l r";
+}
+header .banner .left {
+  grid-area: l;
+}
+header .banner .right {
+  grid-area: r;
+}
