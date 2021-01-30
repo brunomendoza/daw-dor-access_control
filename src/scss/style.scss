@@ -95,19 +95,28 @@ header {
             }
         }
     }
+}
 
-    .banner {
-        display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-areas: "l r";
+.banner {
+    padding: 1.25rem;
+    background-color: rgba($color: #FFF, $alpha: 0.3);
 
-        .left {
-            grid-area: l;
+    .left-container {
+        h2 {
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            font-weight: bold;
+            color: variables.$primary-color;
         }
 
-        .right {
-            grid-area: r;
+        p {
+            margin-bottom: 0.75rem;
+            line-height: 1.15;
         }
+    }
+
+    .right-container {
+        display: none;
     }
 }
 
@@ -172,5 +181,24 @@ main section {
     .page {
         max-width: 1280px;
         margin: 0 auto;
+    }
+
+    .banner {
+        display: grid;
+        grid-template-columns: 33% auto;
+        grid-template-areas: "l r";
+    
+        .left-container {
+            grid-area: l;
+        }
+    
+        .right-container {
+            display: block;
+            grid-area: r;
+
+            img {
+                width: 100%;
+            }
+        }
     }
 }
