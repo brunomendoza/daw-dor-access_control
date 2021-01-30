@@ -9,6 +9,13 @@ html {
     box-sizing: border-box;
 }
 
+body {
+    background-image: url("../assets/img/bg_accessc.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 .page {
     padding: 1.25rem;
     display: flex;
@@ -16,10 +23,6 @@ html {
     justify-content: flex-start;
 
     min-height: 1100px;
-    background-image: url("../assets/img/bg_accessc.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 header, main, footer {
@@ -30,6 +33,7 @@ header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 20 / 14 * 1rem;
+    margin-bottom: 1.25rem;
 
     .logo {
         display: block;
@@ -105,13 +109,68 @@ header {
             grid-area: r;
         }
     }
+}
 
+main section {
+    margin-bottom: 1.25rem;
+}
+
+.card-wrapper {
+    margin-bottom: 1.25rem;
+    background-color: white;
+    
+    .display-1 {
+        margin-bottom: 1.25rem;
+        text-align: center;
+        color: variables.$secondary-color;
+        
+        i.material-icons {
+            font-size: 6rem;
+        }
+    }
+    
+    .card {
+        box-sizing: border-box;
+        height: 100%;
+        padding: 1rem;
+        
+        .card-body {
+            & > h2 {
+                margin-bottom: 1rem;
+                font-size: 1.25rem;
+                line-height: 1.15;
+                font-weight: bold;
+                text-align: center;
+            }
+            
+            & > p {
+                line-height: 1.5;
+                text-align: center;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: variables.$breakpoint-md) {
-
+    .card-wrapper {
+        margin: 0 .75rem 1.25rem;
+        min-height: 360px;
+    }
+    section.featured-content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        & > .card-wrapper {
+            flex: 1 1 360px;
+        }
+    }
 }
 
 @media screen and (min-width: variables.$breakpoint-lg) {
-
+    .page {
+        max-width: 1280px;
+        margin: 0 auto;
+    }
 }
