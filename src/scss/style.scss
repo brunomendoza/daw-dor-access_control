@@ -192,6 +192,36 @@ main section {
     }
 }
 
+.contact-us {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 0 7px grey;
+    align-items: center;
+    padding: 2rem;
+
+    h2 {
+        text-align: center;
+        font-size: 2.2rem;
+        font-weight: bolder;
+    }
+
+    .form-group{
+        margin:1rem 0rem 1rem 0rem;
+    }
+
+    .form-control{
+        width:250px;
+        height: 1.5rem;
+    }
+
+    .btnContact {
+        background: #005400;
+        color:white;
+        border: 1px solid black;
+    }
+}
+
 @media screen and (min-width: variables.$breakpoint-md) {
   
 }
@@ -248,5 +278,9 @@ main section {
         & > .card-wrapper {
             flex: 1 1 360px;
         }
+    }
+
+    .contact-us {
+        margin:0px 10px 0px 10px;
     }
 }
