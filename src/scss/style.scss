@@ -97,6 +97,7 @@ header {
     }
 }
 
+/*
 .banner {
     padding: 1.25rem;
     background-color: rgba($color: #FFF, $alpha: 0.3);
@@ -118,6 +119,44 @@ header {
     .right-container {
         display: none;
     }
+}*/
+
+/* banner mobile version */
+.banner {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    box-shadow: 0 0 7px grey;
+    align-items: center;
+
+    .left-container{
+
+        flex:100%;
+        max-width: 90%;
+        padding:1.5rem;
+
+        h2 {
+            font-size: 2.1rem;
+            font-weight: bolder;
+        }
+
+        p {
+            font-size: 1.4rem;
+            margin: 10px 0px 10px 0px;
+            text-align: justify;
+        }
+    }
+
+    .right-container {
+
+        flex:100%;
+        max-width: 90%;
+
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
 }
 
 main section {
@@ -127,6 +166,7 @@ main section {
 .card-wrapper {
     margin-bottom: 1.25rem;
     background-color: white;
+    box-shadow: 0 0 7px grey;
     
     .display-1 {
         margin-bottom: 1.25rem;
@@ -175,6 +215,7 @@ main section {
             flex: 1 1 360px;
         }
     }
+  
 }
 
 @media screen and (min-width: variables.$breakpoint-lg) {
@@ -183,6 +224,37 @@ main section {
         margin: 0 auto;
     }
 
+      /* banner desktop version */
+    .banner {
+        display: flex;
+        flex-direction: row;
+        background: white;
+        justify-content: space-between;
+        margin: 0px 10px 1.6rem 10px;
+
+        .left-container{
+
+            flex:49%;
+            max-width: 49%;
+    
+            h2 {
+                font-size: 2.2rem;
+            }
+    
+            p {
+                font-size: 1.4rem;
+            }
+        }
+    
+        .right-container {
+    
+            flex:49%;
+            max-width: 49%;
+
+        }
+    }
+
+    /*
     .banner {
         display: grid;
         grid-template-columns: 33% auto;
@@ -200,5 +272,5 @@ main section {
                 width: 100%;
             }
         }
-    }
+    }*/
 }
