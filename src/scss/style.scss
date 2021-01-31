@@ -29,6 +29,10 @@ header, main, footer {
     margin-bottom: 20 / 14 * 1rem;
 }
 
+footer {
+    margin-left: 10px;
+}
+
 header {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -111,30 +115,6 @@ header {
     }
 }
 
-/*
-.banner {
-    padding: 1.25rem;
-    background-color: rgba($color: #FFF, $alpha: 0.3);
-
-    .left-container {
-        h2 {
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-            font-weight: bold;
-            color: variables.$primary-color;
-        }
-
-        p {
-            margin-bottom: 0.75rem;
-            line-height: 1.15;
-        }
-    }
-
-    .right-container {
-        display: none;
-    }
-}*/
-
 /* banner mobile version */
 .banner {
     display: flex;
@@ -144,7 +124,6 @@ header {
     align-items: center;
 
     .left-container{
-
         flex:100%;
         max-width: 90%;
         padding:1.5rem;
@@ -162,7 +141,6 @@ header {
     }
 
     .right-container {
-
         flex:100%;
         max-width: 90%;
 
@@ -195,7 +173,7 @@ main section {
     .card {
         box-sizing: border-box;
         height: 100%;
-        padding: 1rem;
+        padding: 2rem 1rem;
         
         .card-body {
             & > h2 {
@@ -215,20 +193,6 @@ main section {
 }
 
 @media screen and (min-width: variables.$breakpoint-md) {
-    .card-wrapper {
-        margin: 0 .75rem 1.25rem;
-        min-height: 360px;
-    }
-    section.featured-content {
-        display: flex;
-        flex-flow: row nowrap;
-        justify-content: flex-start;
-        align-items: center;
-        
-        & > .card-wrapper {
-            flex: 1 1 360px;
-        }
-    }
   
 }
 
@@ -253,7 +217,6 @@ main section {
         margin: 0px 10px 1.6rem 10px;
 
         .left-container{
-
             flex:49%;
             max-width: 49%;
     
@@ -267,30 +230,23 @@ main section {
         }
     
         .right-container {
-    
             flex:49%;
             max-width: 49%;
-
         }
     }
 
-    /*
-    .banner {
-        display: grid;
-        grid-template-columns: 33% auto;
-        grid-template-areas: "l r";
-    
-        .left-container {
-            grid-area: l;
+    .card-wrapper {
+        margin: 0 .75rem 1.25rem;
+        min-height: 360px;
+    }
+    section.featured-content {
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        
+        & > .card-wrapper {
+            flex: 1 1 360px;
         }
-    
-        .right-container {
-            display: block;
-            grid-area: r;
-
-            img {
-                width: 100%;
-            }
-        }
-    }*/
+    }
 }
